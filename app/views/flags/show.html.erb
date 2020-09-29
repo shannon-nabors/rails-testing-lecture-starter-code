@@ -1,0 +1,10 @@
+<div class="heading secondary-header">Flag of <%= @flag.region %></div>
+<div class="ui container">
+<div class="main-wrapper wrapper">
+    <p><%= @flag.info %></p>
+    <%= image_tag @flag.image_url, class: "show-image" %>
+</div>
+<div class="wrapper">
+    <%=link_to "See all flags", flags_path, class: "ui blue button"%>
+</div>
+</div>

@@ -1,0 +1,9 @@
+<div class="heading primary-header">FLAGS FLAGS FLAGS</div>
+
+<div class="gallery">
+<% @flags.each do |flag| %>
+    <%= link_to flag_path(flag) do %>
+    <%= image_tag flag.image_url, class: "gallery-image" %>
+    <% end %>
+<% end %>
+</div>
