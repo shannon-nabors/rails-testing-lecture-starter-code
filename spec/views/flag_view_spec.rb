@@ -23,9 +23,9 @@ RSpec.describe "Flag Views", type: :system do
     describe 'can create new flag with form' do
 
         before(:each) do
-            ApplicationController.any_instance.stub(:logged_in?).and_return(true)
-            User.stub(:find).and_return(User.new)
-            User.any_instance.stub(:username).and_return("MATTEO")
+            allow_any_instance_of(ApplicationController).to receive(:logged_in?).and_return(true)
+            allow(User).to receive(:find).and_return(User.new)
+            allow_any_instance_of(User).to receive(:username).and_return("MATTEO")
         end
 
         it 'loads the new form' do
