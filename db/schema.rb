@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_202605) do
+ActiveRecord::Schema.define(version: 2020_09_29_225357) do
 
   create_table "flags", force: :cascade do |t|
     t.string "region"
     t.string "info"
     t.string "image_url"
+    t.string "flag_type"
     t.integer "rating"
+    t.boolean "current"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
